@@ -6,7 +6,7 @@
 
 ## 网站地址
 
-**在线访问**: https://kin334750-rgb.github.io/oc-world/
+**在线访问**: https://EVva7.github.io/oc-world/
 
 ---
 
@@ -51,7 +51,7 @@ OC World (Original Character World) is a web application for creating, sharing, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/kin334750-rgb/oc-world.git
+git clone https://github.com/EVva7/oc-world.git
 
 # Open index.html in your browser
 # Or use a simple HTTP server:
@@ -62,12 +62,12 @@ Then open http://localhost:3000
 
 ### Deployment to GitHub Pages
 
-1. Go to https://github.com/kin334750-rgb/oc-world
+1. Go to https://github.com/EVva7/oc-world
 2. Go to **Settings** → **Pages**
 3. Select **main** branch as Source
 4. Click Save
 
-Your site will be available at https://kin334750-rgb.github.io/oc-world/
+Your site will be available at https://EVva7.github.io/oc-world/
 
 ---
 
@@ -112,7 +112,7 @@ OC World（原创角色世界）是一个用于创建、分享和互动原创角
 
 ```bash
 # 克隆仓库
-git clone https://github.com/kin334750-rgb/oc-world.git
+git clone https://github.com/EVva7/oc-world.git
 
 # 在浏览器中打开 index.html
 # 或使用简单的 HTTP 服务器：
@@ -123,12 +123,12 @@ npx serve .
 
 ### 部署到 GitHub Pages
 
-1. 访问 https://github.com/kin334750-rgb/oc-world
+1. 访问 https://github.com/EVva7/oc-world
 2. 进入 **Settings** → **Pages**
 3. 选择 **main** 分支作为 Source
 4. 点击 Save
 
-你的网站将在 https://kin334750-rgb.github.io/oc-world/ 可访问
+你的网站将在 https://EVva7.github.io/oc-world/ 可访问
 
 ### 许可证
 
