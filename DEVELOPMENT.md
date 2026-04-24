@@ -391,3 +391,103 @@ npm run preview
 
 > 文档创建时间：2026-04-24
 > 最后更新：2026-04-24
+
+---
+
+## 九、分支策略
+
+### 9.1 分支结构
+
+```
+main        ────► 生产环境 (v2.0.0)
+develop     ────► 开发主分支
+│
+├── feature/chat-system       ────► 实时聊天功能
+├── feature/oc-detail-page   ────► 角色详情页
+├── feature/comments         ────► 评论系统
+├── feature/search           ────► 搜索功能
+├── feature/error-handling   ────► 错误处理优化
+├── feature/form-validation  ────► 表单验证
+├── feature/image-lazy-load ────► 图片懒加载
+├── feature-ui-improvements  ────► UI 改进
+├── feature/pwa-support     ────► PWA 支持
+├── feature/share           ────► 分享功能
+└── feature/ranking         ────► 排行榜功能
+```
+
+### 9.2 分支说明
+
+| 分支 | 描述 | 状态 |
+|------|------|------|
+| main | 生产环境代码 | ✅ 稳定 |
+| develop | 开发主分支 | 🔄 开发中 |
+| feature/chat-system | 实时聊天/私信 | 📋 待开发 |
+| feature/oc-detail-page | 角色详情页 | 📋 待开发 |
+| feature/comments | 评论系统 | 📋 待开发 |
+| feature/search | 搜索功能 | 📋 待开发 |
+| feature/error-handling | 全局错误处理 | 📋 待开发 |
+| feature/form-validation | 表单验证增强 | 📋 待开发 |
+| feature/image-lazy-load | 图片懒加载 | 📋 待开发 |
+| feature-ui-improvements | UI/UX 改进 | 📋 待开发 |
+| feature/pwa-support | PWA 离线支持 | 📋 待开发 |
+| feature/share | 社交分享 | 📋 待开发 |
+| feature/ranking | 热门榜单 | 📋 待开发 |
+
+### 9.3 版本标签
+
+| 标签 | 描述 |
+|------|------|
+| v1.0.0 | 原始 Vanilla JS 版本 |
+| v1.1.0 | 添加 GitHub OAuth 支持 |
+| v2.0.0 | React + TypeScript 重构版 |
+| v2.0.0-rc | React 版本候选发布 |
+
+### 9.4 开发流程
+
+```bash
+# 1. 从 develop 创建功能分支
+git checkout develop
+git checkout -b feature/xxx
+
+# 2. 开发完成后合并到 develop
+git checkout develop
+git merge feature/xxx
+
+# 3. 测试稳定后合并到 main 并打标签
+git checkout main
+git merge develop
+git tag v2.1.0
+git push origin main --tags
+```
+
+---
+
+## 十、隐私安全
+
+### 10.1 已排除的文件
+
+以下文件已添加到 .gitignore，不会提交到远程：
+
+- `.env` - 环境变量（包含 API 密钥）
+- `node_modules/` - 依赖包
+- `dist/` - 构建输出
+- `.vscode/` - IDE 配置
+- `*.log` - 日志文件
+
+### 10.2 环境变量模板
+
+项目根目录下的 `.env.example` 包含需要的环境变量：
+
+```bash
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_anon_key
+JWT_SECRET=your_jwt_secret
+PORT=3000
+ALLOWED_ORIGINS=your_allowed_origins
+```
+
+复制并重命名为 `.env` 后填入实际值即可。
+
+---
+
+> 最后更新：2026-04-24
